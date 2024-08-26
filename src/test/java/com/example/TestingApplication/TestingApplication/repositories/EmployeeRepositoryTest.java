@@ -38,8 +38,6 @@ class EmployeeRepositoryTest {
     void testFindByEmail_whenEmailIsValid_thenReturnEmployee() {
         //Arrange Given
         employeeRepository.save(employee);
-
-
         //act,When
         List<Employee> employeeList = employeeRepository.findByEmail(employee.getEmail());
 
@@ -63,6 +61,5 @@ class EmployeeRepositoryTest {
         //Then
         assertThat(employeeList).isNotNull();
         assertThat(employeeList).isEmpty();
-
     }
 }
