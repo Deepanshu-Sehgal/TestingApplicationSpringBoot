@@ -51,13 +51,10 @@ class EmployeeRepositoryTest {
 
     @Test
     void testFindByEmail_whenEmailIsNotFound_thenReturnEmptyEmployee() {
-
         //Given
         String email = "notPresent.123@gmail.com";
-
         //When
         List<Employee> employeeList = employeeRepository.findByEmail(email);
-
         //Then
         assertThat(employeeList).isNotNull();
         assertThat(employeeList).isEmpty();
