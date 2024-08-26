@@ -40,8 +40,6 @@ class EmployeeRepositoryTest {
         employeeRepository.save(employee);
         //act,When
         List<Employee> employeeList = employeeRepository.findByEmail(employee.getEmail());
-
-
         //assert, Then
         assertThat(employeeList).isNotNull();
         assertThat(employeeList).isNotEmpty();
